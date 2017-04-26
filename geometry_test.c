@@ -145,6 +145,45 @@ START_TEST(test_2d_midpoint)
 }
 END_TEST
 
+/* coord_2d_area Test */
+START_TEST(test_2d_area)
+{
+    coord_2d_t a;
+    coord_2d_t b;
+    coord_2d_t c;
+
+    a.x = 15;
+    a.y = 15;
+    b.x = 23;
+    b.y = 30;
+    c.x = 50;
+    c.y = 25;
+   
+    double area = coord_2d_area(&a, &b, &c);
+    ck_assert(area == 222.50);
+
+    a.x = 50;
+    a.y = 15;
+    b.x = 23;
+    b.y = 30;
+    c.x = 50;
+    c.y = 25;
+   
+    double area = coord_2d_area(&a, &b, &c);
+    ck_assert(area == 135.00);
+    
+    a.x = 25;
+    a.y = 5;
+    b.x = 10;
+    b.y = 50;
+    c.x = 70;
+    c.y = 30;
+   
+    double area = coord_2d_area(&a, &b, &c);
+    ck_assert(area == 1200.00);
+}
+END_TEST
+
 /* coord_2d Test Suite */
 Suite* coord_2d_suite(void)
 {
