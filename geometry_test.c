@@ -152,7 +152,7 @@ START_TEST(test_2d_area)
     coord_2d_t b;
     coord_2d_t c;
 
-    a.x = 15;
+    /*a.x = 15;
     a.y = 15;
     b.x = 23;
     b.y = 30;
@@ -168,7 +168,7 @@ START_TEST(test_2d_area)
     c.x = 50;
     c.y = 25;
     double area = coord_2d_area(&a, &b, &c);
-    ck_assert(area == 135.00);
+    ck_assert(area == 135.00);*/
     
     a.x = 25;
     a.y = 5;
