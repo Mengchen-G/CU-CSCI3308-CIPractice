@@ -1,4 +1,4 @@
-install: make get-deps
+#install: make get-deps
 language: c
 compiler: gcc
 script: make clean && make test
