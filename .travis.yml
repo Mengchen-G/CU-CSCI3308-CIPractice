@@ -1,6 +1,5 @@
-#install: make get-deps
 language: c
-compiler: gcc
-script: make clean && make test
-# uncomment and edit the following line if your project needs to run something other than `rake`:
-# script: bundle exec rspec spec
+sudo: scons
+compiler: 
+  - gcc
+script: make dep && make && make test
